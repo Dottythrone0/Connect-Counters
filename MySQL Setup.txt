@@ -1,0 +1,16 @@
+MySQL 5.5 Database server download: https://sourceforge.net/projects/quickeasyphp/files/OldFiles/EasyPHP-OBSOLETE/5.3.9/
+
+
+SQL code used to create HighScores database:
+
+CREATE DATABASE HighScores;
+
+SQL code used to create the HighScores table:
+
+CREATE TABLE HighScores(
+  PlayerID integer NOT NULL AUTO_INCREMENT,
+  Name varchar(20) NOT NULL,
+  Score integer NOT NULL,
+  PRIMARY KEY(PlayerID),
+  CHECK (Score BETWEEN 0 AND 5)
+);
